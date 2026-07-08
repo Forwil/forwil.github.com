@@ -1,45 +1,51 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forwil's home page</title>
-    <style type="text/css" media="screen">
-      /* 重置默认样式 */
+    <meta
+      name="description"
+      content="Fengwei Yu (Forwil) — AI infrastructure, deep learning compilers, model quantization, and large-scale training."
+    />
+    <title>Fengwei Yu (Forwil)</title>
+    <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
-      /* 基础样式 */
       body {
         font-family: "Times New Roman", Times, serif;
         line-height: 1.6;
         color: #333;
-        max-width: 1100px;
+        max-width: 1000px;
         margin: 0 auto;
-        padding: 20px;
+        padding: 24px 20px 40px;
         background: #fff;
       }
 
-      /* 标题样式 */
       h1 {
-        color: #172f7e !important;
+        color: #172f7e;
         font-size: 28px;
         margin-bottom: 20px;
       }
 
       h2 {
-        color: #172f7e !important;
-        margin-top: 0.7em;
-        margin-bottom: 0.3em;
+        color: #172f7e;
+        font-size: 22px;
+        margin: 1.4em 0 0.5em;
         padding-bottom: 0.2em;
-        line-height: 1;
-        padding-top: 0.5em;
+        border-bottom: 1px solid #ddd;
       }
 
-      /* 链接样式 */
+      h3 {
+        color: #444;
+        font-size: 16px;
+        margin: 1em 0 0.4em;
+        font-weight: bold;
+      }
+
       a {
         color: #1772d0;
         text-decoration: none;
@@ -49,521 +55,537 @@
         color: #f09228;
       }
 
-      /* 头部区域 */
+      p {
+        margin-bottom: 0.8em;
+      }
+
       .header {
         display: flex;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
         border-bottom: 1px solid #ddd;
-        padding-bottom: 10px;
+        padding-bottom: 16px;
       }
 
       .profile-image {
         width: 120px;
         height: 120px;
         border-radius: 50%;
-        margin-right: 20px;
+        margin-right: 24px;
+        object-fit: cover;
       }
 
       .header-info {
-        line-height: 1.4;
+        line-height: 1.5;
       }
 
-      .header-info span {
+      .header-info .name {
         display: block;
-        margin-bottom: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 8px;
       }
 
-      .header-info a {
-        margin-right: 10px;
+      .header-info .links {
+        display: block;
+        color: #888;
       }
 
-      /* 内容区域 */
+      .header-info .links a,
+      .header-info .links span.contact {
+        color: #1772d0;
+      }
+
+      .header-info .links .sep {
+        margin: 0 8px;
+        color: #bbb;
+      }
+
       .section {
-        clear: both;
-        margin-bottom: 1.5em;
-        border-bottom: 1px solid #ddd;
+        margin-bottom: 1em;
+      }
+
+      .section > p,
+      .section > ul {
+        margin-bottom: 0.6em;
+      }
+
+      ul.interests,
+      ul.news {
+        list-style: circle;
+        padding-left: 1.6em;
+      }
+
+      ul.interests li,
+      ul.news li {
+        padding-bottom: 0.4em;
       }
 
       .paper {
-        clear: both;
-        margin-top: 0.3em;
-        margin-bottom: 0.3em;
-        background: #fff;
-        padding: 1em;
+        margin: 0.5em 0 1em;
+        padding-left: 0.2em;
       }
 
-      /* 列表样式 */
-      ul {
-        list-style: circle;
-      }
-
-      li {
-        padding-bottom: 0.5em;
-        margin-left: 1.4em;
-      }
-
-      /* 强调文本 */
-      strong,
-      b {
+      .paper .title {
         font-weight: bold;
       }
 
-      /* 页脚样式 */
+      .paper .venue {
+        display: block;
+        margin: 0.15em 0;
+        color: #555;
+      }
+
+      .paper .authors {
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      .paper .pdf-link {
+        color: #1772d0;
+        margin-left: 0.3em;
+      }
+
+      .pub-year {
+        margin-top: 1em;
+      }
+
       footer {
-        text-align: center;
-        padding: 10px;
-        margin-top: 20px;
+        text-align: right;
+        padding: 20px 0 0;
+        margin-top: 24px;
+        border-top: 1px solid #ddd;
+        font-size: 13px;
+        color: #888;
       }
     </style>
   </head>
   <body>
-    <h1>Forwil's home page</h1>
+    <h1>Fengwei Yu's home page</h1>
 
-    <!-- 头部个人信息区域 -->
     <div class="header">
       <img
         class="profile-image"
-        title="rbg"
         src="images/forwil.png"
-        alt="Profile Image"
+        alt="Portrait of Fengwei Yu"
       />
       <div class="header-info">
-        <span style="font-size: 16pt"> Fengwei Yu(Forwil) </span>
-        <span></span>
-        <span></span>
-        <span>forwil@foxmail.com</span>
-        <span>
-          <a href="https://github.com/forwil" target="_blank">Github</a> /
+        <span class="name">Fengwei Yu (Forwil)</span>
+        <span class="links">
+          <a href="mailto:forwil@foxmail.com">forwil@foxmail.com</a>
+          <span class="sep">/</span>
+          <a href="https://github.com/forwil" target="_blank" rel="noopener">Github</a>
+          <span class="sep">/</span>
           <a
             href="https://scholar.google.com.hk/citations?user=qzWfLRIAAAAJ&hl=zh-CN"
             target="_blank"
+            rel="noopener"
+            >Google Scholar</a
           >
-            Google scholar
-          </a>
-          /
-          <a href="static/resume_of_yfw.pdf">CV</a>
         </span>
       </div>
     </div>
 
-    <!-- Research 部分 -->
-    <div class="section">
+    <section class="section">
       <h2>Research</h2>
-      <div class="paper">
-        <p>
-          I'm diving in in deep learning industrialization. Here is the areas I
-          am interested in
-        </p>
-        <br />
-        <ul>
-          <li>High performance computing</li>
-          <li>Neural Network Compiler</li>
-          <li>Neural Network Deployment, Porting and Inference</li>
-          <li>Model Quantization and Sparity</li>
-          <li>Large Scale Training</li>
-        </ul>
-      </div>
-    </div>
+      <p>
+        My work focuses on making deep learning practical and efficient at
+        industrial scale. Areas of interest:
+      </p>
+      <ul class="interests">
+        <li>High-performance computing</li>
+        <li>Neural network compilers</li>
+        <li>Neural network deployment, porting, and inference</li>
+        <li>Model quantization and sparsity</li>
+        <li>Large-scale training</li>
+      </ul>
+    </section>
 
-    <!-- News 部分 -->
-    <div class="section">
+    <section class="section">
       <h2>News</h2>
-      <div class="paper">
-        <!--
-          <font color="#FF0000">
-              <b>We are now hiring self-motivation intern research. If you are looking for some ML-system jobs please feel free to e-mail me (forwil@foxmail.com) !</b>
-          </font>
-          -->
-        <ul>
-          <li>[2023] 3 papers accpeted by ICPP/MLSys/IPDPS in 2023！</li>
-          <li>[2022] 4 papers accpeted by ICLR/CVPR/ICPP in 2022!</li>
-          <li>[2021] 7 papers accepted by ICLR/CVPR/NeurIPS/ICCV in 2021!</li>
-          <li>
-            [2021] My team won championship of
-            <a href="https://lpcv.ai/2021LPCVC/introduction"
-              >LPCVC 2021 FPGA Track</a
-            >, we also opensource our
-            <a href="https://github.com/ModelTC/LPCV2021_Winner_Solution"
-              >solution</a
-            >. We are also release one benchmark with code
-            <a href="http://mqbench.tech/">MQbench</a> and one opensource
-            project <a href="https://github.com/ModelTC/EOD">UP.</a>
-          </li>
-          <li>[2020] 4 papers accepted by ICPP/CVPR/ICLR in 2020!</li>
-          <li>[2019] 1 papers accepted by ICCV in 2019!</li>
-          <li>
-            [2016] We win the 1st place in ECCV-MOT16 Challenge!
-            <a
-              href="https://drive.google.com/open?id=0B5ACiy41McAHMjczS2p0dFg3emM"
-              >data</a
-            >
-          </li>
-          <li>[2016] 1 papers accepted by ECCV in 2016!</li>
-        </ul>
-
-      </div>
-    </div>
-    <!-- About me 部分 -->
-    <div class="section">
-      <h2>About me / bio</h2>
-      <div class="paper">
-        <p>I will begin a wonderful journey by co-founding an AI company in 2025.</p>
-        <br />
-        <p>
-          I was Senior R&D Director at Momenta, an industry leader in autonomous
-          driving technology. I lead a AI-Infra team that specializes in
-          training accelerators、model quantization and deep learning compiler.
-        </p>
-        <br />
-        <p>
-          Prior to this, I was a Vice Research Director and team leader of a
-          AI-Infra team called Model-ToolChain of Sensetime Research under the
-          supervisor of
-          <a href="http://www.ee.cuhk.edu.hk/~xgwang/">Prof. Wang-Xiaogang</a>
-          and <a href="https://yan-junjie.github.io/">Dr. Yan-Junjie</a>,
-          working on deep learning system.
-        </p>
-        <p>
-          You can find our opensource project in Github
-          <a href="https://github.com/ModelTC/">ModelTC</a> group. And find tech
-          blog on Zhihu
-          <a href="https://www.zhihu.com/column/c_1320691511223136256"
-            >踢翻炼丹炉</a
+      <ul class="news">
+        <li>[2023] 3 papers accepted at ICPP, MLSys, and IPDPS.</li>
+        <li>[2022] 4 papers accepted at ICLR, CVPR, and ICPP.</li>
+        <li>[2021] 7 papers accepted at ICLR, CVPR, NeurIPS, and ICCV.</li>
+        <li>
+          [2021] Our team won the championship of the
+          <a href="https://lpcv.ai/2021LPCVC/introduction" target="_blank" rel="noopener"
+            >LPCVC 2021 FPGA Track</a
+          >, with our
+          <a href="https://github.com/ModelTC/LPCV2021_Winner_Solution" target="_blank" rel="noopener"
+            >winning solution</a
           >
-        </p>
-        <br />
-        <p>
-          I enjoy 2-years full-time internship in Sensetime Research Video Intelligent Group under the
-          supervisor of <a href="https://yan-junjie.github.io/">Dr. Yan-Junjie</a> on developing
-          high-performance video face/vehicle/pedestrian analysis system and
-          porting algorithm into embedded system.
-        </p>
-        <br />
-        <p>
-          Before join sensetime, I leaded BUAA HPC team get first-prize on ASC
-          Student Supercomputer Challenge 2015 and spend half an year intership
-          on Microsoft IOT team Beijing to develop IoT communication
-          protocal.
-        </p>
-        <br />
-        <p>
-          I earned my Master's and Bachelor's degrees in Computer Science from
-          Beihang University in 2018 and 2015, respectively, under the guidance
-          of Professor Xiaohua Shi. My studies centered on JVM memory profiling,
-          the CompCert project, and language models.
-        </p>
-      </div>
-    </div>
+          released as open source. We also released the
+          <a href="http://mqbench.tech/" target="_blank" rel="noopener">MQBench</a>
+          quantization benchmark and the
+          <a href="https://github.com/ModelTC/EOD" target="_blank" rel="noopener">UP</a>
+          training framework.
+        </li>
+        <li>[2020] 4 papers accepted at ICPP, CVPR, and ICLR.</li>
+        <li>[2019] 1 paper accepted at ICCV.</li>
+        <li>
+          [2016] We won 1st place in the ECCV MOT16 Challenge
+          (<a
+            href="https://drive.google.com/open?id=0B5ACiy41McAHMjczS2p0dFg3emM"
+            target="_blank"
+            rel="noopener"
+            >data</a
+          >); 1 paper accepted at ECCV.
+        </li>
+      </ul>
+    </section>
 
-    <!-- Publications 部分 -->
-    <div class="section">
-      <h2 id="reports">Publications</h2>
+    <section class="section">
+      <h2>About me</h2>
+      <p>
+        In 2025 I co-founded an AI company, opening a new chapter in my
+        career.
+      </p>
+      <p>
+        Prior to that, I was Senior R&amp;D Director at
+        <strong>Momenta</strong> (HKEX: 6880), a leader in autonomous driving,
+        where I led the AI-Infra team building training accelerators, model
+        quantization pipelines, and deep learning compilers.
+      </p>
+      <p>
+        Before Momenta, I was Vice Research Director at
+        <strong>SenseTime</strong> Research (HKEX: 0020), leading the
+        Model-ToolChain team under the supervision of
+        <a href="http://www.ee.cuhk.edu.hk/~xgwang/" target="_blank" rel="noopener"
+          >Prof. Xiaogang Wang</a
+        >
+        and
+        <a href="https://yan-junjie.github.io/" target="_blank" rel="noopener"
+          >Dr. Junjie Yan</a
+        >. Much of our work is open-sourced under the
+        <a href="https://github.com/ModelTC/" target="_blank" rel="noopener">ModelTC</a>
+        organization on GitHub, and I write about it on Zhihu at
+        <a href="https://www.zhihu.com/column/c_1320691511223136256" target="_blank" rel="noopener"
+          >踢翻炼丹炉</a
+        >.
+      </p>
+      <p>
+        I first joined SenseTime as a full-time intern for two years in the
+        Video Intelligence Group under
+        <a href="https://yan-junjie.github.io/" target="_blank" rel="noopener"
+          >Dr. Junjie Yan</a
+        >, working on high-performance video analysis systems (face, vehicle,
+        pedestrian) and porting algorithms to embedded platforms.
+      </p>
+      <p>
+        During college, I led the BUAA HPC team to first prize at the ASC
+        Student Supercomputer Challenge 2015, and spent half a year interning
+        on the Microsoft IoT team in Beijing, working on IoT communication
+        protocols.
+      </p>
+      <p>
+        I received my M.S. (2018) and B.S. (2015) in Computer Science from
+        Beihang University, advised by Prof. Xiaohua Shi. My research covered
+        JVM memory profiling, the CompCert project, and language models.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 id="publications">Publications</h2>
+
+      <h3 class="pub-year">2023</h3>
 
       <div class="paper" id="FamilySeer">
-        <b
+        <span class="title"
           >Exploiting Subgraph Similarities for Efficient Auto-tuning of Tensor
-          Programs</b
+          Programs</span
         >
-        <a href=""><font color="#0000FF">PDF</font></a>
-        <br />2023 International Conference on Parallel Processing（ICPP）<br />
-        <font face="times"
+        <span class="venue">International Conference on Parallel Processing (ICPP), 2023</span>
+        <span class="authors"
           >Mingzhen Li, Hailong Yang, Shanjun Zhang,
-          <strong>Fengwei Yu</strong>, Ruihao Gong, Yi Liu, Zhongzhi Luan, Depei
-          Qian</font
+          <strong>Fengwei Yu</strong>, Ruihao Gong, Yi Liu, Zhongzhi Luan,
+          Depei Qian</span
         >
       </div>
 
       <div class="paper" id="sysnoise">
-        <b
+        <span class="title"
           >SysNoise: Exploring and Benchmarking Training-Deployment System
-          Inconsistency</b
+          Inconsistency</span
         >
-        <a href=""><font color="#0000FF">PDF</font></a>
-        <br />2023 Conference on Machine Learning and Systems（MlSys）<br />
-        <font face="times"
+        <span class="venue">Conference on Machine Learning and Systems (MLSys), 2023</span>
+        <span class="authors"
           >Yan Wang, Yuhang Li, Ruihao Gong, Aishan Liu, Yanfei Wang, Jian Hu,
-          Yongqiang Yao, Yunchen Zhang, Tianzi Xiao,<strong>Fengwei Yu</strong>,
-          Xianglong Liu</font
+          Yongqiang Yao, Yunchen Zhang, Tianzi Xiao,
+          <strong>Fengwei Yu</strong>, Xianglong Liu</span
         >
       </div>
 
       <div class="paper" id="mimose">
-        <b
+        <span class="title"
           >Exploiting Input Tensor Dynamics in Activation Checkpointing for
-          Efficient Training on GPU</b
+          Efficient Training on GPU</span
         >
-        <a href="https://arxiv.org/pdf/2209.02478.pdf"
-          ><font color="#0000FF">PDF</font></a
+        <a class="pdf-link" href="https://arxiv.org/pdf/2209.02478.pdf" target="_blank" rel="noopener"
+          >[PDF]</a
         >
-        <br />2023 International Parallel & Distributed Processing
-        Symposium（IPDPS）<br />
-        <font face="times"
+        <span class="venue"
+          >International Parallel &amp; Distributed Processing Symposium (IPDPS), 2023</span
+        >
+        <span class="authors"
           >Jianjin Liao, Mingzhen Li, Hailong Yang, Qingxiao Sun, Biao Sun,
           Jiwei Hao, Tianyu Feng, <strong>Fengwei Yu</strong>, Shengdong Chen,
-          Ye Tao, Zicheng Zhang, Zhongzhi Luan, Depei Qian</font
+          Ye Tao, Zicheng Zhang, Zhongzhi Luan, Depei Qian</span
         >
       </div>
 
+      <h3 class="pub-year">2022</h3>
+
       <div class="paper" id="nnlqp">
-        <b
+        <span class="title"
           >NNLQP: A Multi-Platform Neural Network Latency Query and Prediction
-          System with An Evolving Database</b
+          System with an Evolving Database</span
         >
-        <a href=""><font color="#0000FF">PDF</font></a>
-        <br />2022 International Conference on Parallel Processing（ICPP）<br />
-        <font face="times"
+        <span class="venue">International Conference on Parallel Processing (ICPP), 2022</span>
+        <span class="authors"
           >Liang Liu, Mingzhu Shen, Ruihao Gong, <strong>Fengwei Yu</strong>,
-          Hailong Yang</font
+          Hailong Yang</span
         >
       </div>
+
       <div class="paper" id="qdrop">
-        <b
+        <span class="title"
           >QDrop: Randomly Dropping Quantization for Extremely Low-bit
-          Post-Training Quantization</b
+          Post-Training Quantization</span
         >
-        <a href="https://openreview.net/pdf?id=ySQH0oDyp7"
-          ><font color="#0000FF">PDF</font></a
+        <a class="pdf-link" href="https://openreview.net/pdf?id=ySQH0oDyp7" target="_blank" rel="noopener"
+          >[PDF]</a
         >
-        <br />2022 International Conference on Learning
-        Representations（ICLR）<br />
-        <font face="times"
+        <span class="venue">International Conference on Learning Representations (ICLR), 2022</span>
+        <span class="authors"
           >Xiuying Wei, Ruihao Gong, Yuhang Li, Xianglong Liu,
-          <strong>Fengwei Yu</strong></font
+          <strong>Fengwei Yu</strong></span
         >
       </div>
 
       <div class="paper" id="see">
-        <b
+        <span class="title"
           >Supervision Exists Everywhere: A Data Efficient Contrastive
-          Language-Image Pre-training Paradigm</b
+          Language-Image Pre-training Paradigm</span
         >
-        <a href="https://openreview.net/pdf?id=zq1iJkNk3uN"
-          ><font color="#0000FF">PDF</font></a
+        <a class="pdf-link" href="https://openreview.net/pdf?id=zq1iJkNk3uN" target="_blank" rel="noopener"
+          >[PDF]</a
         >
-        <br />2022 International Conference on Learning
-        Representations（ICLR）<br />
-        <font face="times"
-          >Yangguang Li, Feng Liang, Lichen Zhao, Yufeng Cui, Wanli Ouyang, Jing
-          Shao, <strong>Fengwei Yu</strong>, Junjie Yan</font
+        <span class="venue">International Conference on Learning Representations (ICLR), 2022</span>
+        <span class="authors"
+          >Yangguang Li, Feng Liang, Lichen Zhao, Yufeng Cui, Wanli Ouyang,
+          Jing Shao, <strong>Fengwei Yu</strong>, Junjie Yan</span
         >
       </div>
 
+      <h3 class="pub-year">2021</h3>
+
       <div class="paper" id="oqat">
-        <b
+        <span class="title"
           >Once Quantization-Aware Training: High Performance Extremely Low-Bit
-          Architecture Search</b
+          Architecture Search</span
         >
         <a
+          class="pdf-link"
           href="https://openaccess.thecvf.com/content/ICCV2021/papers/Shen_Once_Quantization-Aware_Training_High_Performance_Extremely_Low-Bit_Architecture_Search_ICCV_2021_paper.pdf"
-          ><font color="#0000FF">PDF</font></a
+          target="_blank"
+          rel="noopener"
+          >[PDF]</a
         >
-        <br />2021 International Conference on Computer Vision（ICCV）<br />
-        <font face="times"
+        <span class="venue">International Conference on Computer Vision (ICCV), 2021</span>
+        <span class="authors"
           >Mingzhu Shen, Feng Liang, Ruihao Gong, Yuhang Li, Chuming Li, Chen
-          Lin, <strong>Fengwei Yu</strong>, Junjie Yan, Wanli Ouyang</font
+          Lin, <strong>Fengwei Yu</strong>, Junjie Yan, Wanli Ouyang</span
         >
       </div>
 
       <div class="paper" id="ddw">
-        <b>Differentiable Dynamic Wirings for Neural Networks</b>
+        <span class="title">Differentiable Dynamic Wirings for Neural Networks</span>
         <a
+          class="pdf-link"
           href="https://openaccess.thecvf.com/content/ICCV2021/papers/Yuan_Differentiable_Dynamic_Wirings_for_Neural_Networks_ICCV_2021_paper.pdf"
-          ><font color="#0000FF">PDF</font></a
+          target="_blank"
+          rel="noopener"
+          >[PDF]</a
         >
-        <br />2021 International Conference on Computer Vision（ICCV）<br />
-        <font face="times"
+        <span class="venue">International Conference on Computer Vision (ICCV), 2021</span>
+        <span class="authors"
           >Kun Yuan, Quanquan Li, Shaopeng Guo, Dapeng Chen, Aojun Zhou,
-          <strong>Fengwei Yu</strong>, Ziwei Liu</font
+          <strong>Fengwei Yu</strong>, Ziwei Liu</span
         >
       </div>
 
       <div class="paper" id="mixmix">
-        <b
+        <span class="title"
           >MixMix: All You Need for Data-Free Compression Are Feature and Data
-          Mixing</b
+          Mixing</span
         >
-        <a href="https://arxiv.org/pdf/2011.09899"
-          ><font color="#0000FF">PDF</font></a
+        <a class="pdf-link" href="https://arxiv.org/pdf/2011.09899" target="_blank" rel="noopener"
+          >[PDF]</a
         >
-        <br />2021 International Conference on Computer Vision（ICCV）<br />
-        <font face="times"
+        <span class="venue">International Conference on Computer Vision (ICCV), 2021</span>
+        <span class="authors"
           >Yuhang Li, Feng Zhu, Ruihao Gong, Mingzhu Shen, Xin Dong,
-          <strong>Fengwei Yu</strong>, Shaoqing Lu, Shi Gu</font
+          <strong>Fengwei Yu</strong>, Shaoqing Lu, Shi Gu</span
         >
       </div>
 
       <div class="paper" id="ceit">
-        <b>Incorporating convolution designs into visual transformers</b>
-        <a href="https://arxiv.org/abs/2103.11816"
-          ><font color="#0000FF">PDF</font></a
+        <span class="title">Incorporating Convolution Designs into Visual Transformers</span>
+        <a class="pdf-link" href="https://arxiv.org/abs/2103.11816" target="_blank" rel="noopener"
+          >[PDF]</a
         >
-        <br />2021 International Conference on Computer Vision（ICCV）<br />
-        <font face="times"
+        <span class="venue">International Conference on Computer Vision (ICCV), 2021</span>
+        <span class="authors"
           >Kun Yuan, Shaopeng Guo, Ziwei Liu, Aojun Zhou,
-          <strong>Fengwei Yu</strong>, Wei Wu</font
+          <strong>Fengwei Yu</strong>, Wei Wu</span
         >
       </div>
 
       <div class="paper" id="mqbench">
-        <b
+        <span class="title"
           >MQBench: Towards Reproducible and Deployable Model Quantization
-          Benchmark</b
+          Benchmark</span
         >
-        <a href="https://openreview.net/pdf?id=TUplOmF8DsM"
-          ><font color="#0000FF">PDF</font></a
+        <a class="pdf-link" href="https://openreview.net/pdf?id=TUplOmF8DsM" target="_blank" rel="noopener"
+          >[PDF]</a
         >
-        <br />2021 Conference on Neural Information Processing Systems
-        (NeurIPS）<br />
-        <font face="times"
+        <span class="venue"
+          >Conference on Neural Information Processing Systems (NeurIPS), 2021</span
+        >
+        <span class="authors"
           >Yuhang Li, Mingzhu Shen, Jian Ma, Yan Ren, Mingxin Zhao, Qi Zhang,
-          Ruihao Gong, <strong>Fengwei Yu</strong>, Junjie Yan</font
+          Ruihao Gong, <strong>Fengwei Yu</strong>, Junjie Yan</span
         >
       </div>
+
       <div class="paper" id="dsg">
-        <b
-          >Diversifying Sample Generation for Accurate Data-Free Quantization</b
+        <span class="title"
+          >Diversifying Sample Generation for Accurate Data-Free Quantization</span
         >
         <a
+          class="pdf-link"
           href="https://openaccess.thecvf.com/content/CVPR2021/papers/Zhang_Diversifying_Sample_Generation_for_Accurate_Data-Free_Quantization_CVPR_2021_paper.pdf"
-          ><font color="#0000FF">PDF</font></a
+          target="_blank"
+          rel="noopener"
+          >[PDF]</a
         >
-        <br />2021 Conference on Computer Vision and Pattern
-        Recognition（CVPR）<br />
-        <font face="times"
+        <span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR), 2021</span>
+        <span class="authors"
           >Xiangguo Zhang, Haotong Qin, Yifu Ding, Ruihao Gong, Qinghua Yan,
           Renshuai Tao, Yuhang Li, <strong>Fengwei Yu</strong>, Xianglong
-          Liu</font
+          Liu</span
         >
       </div>
 
       <div class="paper" id="brecq">
-        <b
+        <span class="title"
           >BRECQ: Pushing the Limit of Post-Training Quantization by Block
-          Reconstruction</b
+          Reconstruction</span
         >
-        <a href="https://openreview.net/forum?id=POWv6hDd9XH"
-          ><font color="#0000FF">PDF</font></a
+        <a class="pdf-link" href="https://openreview.net/forum?id=POWv6hDd9XH" target="_blank" rel="noopener"
+          >[PDF]</a
         >
-        <br />2021 International Conference on Learning
-        Representations（ICLR）<br />
-        <font face="times"
+        <span class="venue">International Conference on Learning Representations (ICLR), 2021</span>
+        <span class="authors"
           >Yuhang Li, Ruihao Gong, Xu Tan, Yang Yang, Peng Hu, Qi Zhang,
-          <strong>Fengwei Yu</strong>, Wei Wang, Shi Gu</font
+          <strong>Fengwei Yu</strong>, Wei Wang, Shi Gu</span
         >
       </div>
 
+      <h3 class="pub-year">2020</h3>
+
       <div class="paper" id="icpp">
-        <b
+        <span class="title"
           >Extremely Low-bit Convolution Optimization for Quantized Neural
-          Network on Modern Computer Architectures</b
+          Network on Modern Computer Architectures</span
         >
-        <a href="https://dl.acm.org/doi/abs/10.1145/3404397.3404407"
-          ><font color="#0000FF">PDF</font></a
+        <a
+          class="pdf-link"
+          href="https://dl.acm.org/doi/abs/10.1145/3404397.3404407"
+          target="_blank"
+          rel="noopener"
+          >[PDF]</a
         >
-        <br />2020 International Conference on Parallel Processing (ICPP)<br />
-        <font face="times"
-          >Qingchang Han, Yongmin Hu, <strong>Fengwei Yu</strong>, Hailong Yang,
-          Bing Liu, Peng Hu, Ruihao Gong, Yanfei Wang, Rui Wang, Zhongzhi Luan,
-          Depei Qian</font
+        <span class="venue">International Conference on Parallel Processing (ICPP), 2020</span>
+        <span class="authors"
+          >Qingchang Han, Yongmin Hu, <strong>Fengwei Yu</strong>, Hailong
+          Yang, Bing Liu, Peng Hu, Ruihao Gong, Yanfei Wang, Rui Wang, Zhongzhi
+          Luan, Depei Qian</span
         >
       </div>
 
       <div class="paper" id="dms">
-        <b>DMS: Differentiable Dimension Search for Binary Neural Networks</b>
-        <a href="static/dms.pdf"><font color="#0000FF">PDF</font></a>
-        <br />2020 International Conference on Learning Representations (ICLR)
-        NAS workshop<br />
-        <font face="times"
+        <span class="title"
+          >DMS: Differentiable Dimension Search for Binary Neural Networks</span
+        >
+        <a class="pdf-link" href="static/dms.pdf" target="_blank" rel="noopener">[PDF]</a>
+        <span class="venue"
+          >International Conference on Learning Representations (ICLR) NAS Workshop, 2020</span
+        >
+        <span class="authors"
           >Yuhang Li, Ruihao Gong, <strong>Fengwei Yu</strong>, Xin Dong,
-          Xianglong Liu</font
+          Xianglong Liu</span
         >
       </div>
 
       <div class="paper" id="int8">
-        <b>Towards Unified INT8 Training for Convolutional Neural Network</b>
-        <a href="static/int8.pdf"><font color="#0000FF">PDF</font></a>
-        <br />2020 Conference on Computer Vision and Pattern Recognition
-        (CVPR)<br />
-        <font face="times"
+        <span class="title">Towards Unified INT8 Training for Convolutional Neural Networks</span>
+        <a class="pdf-link" href="static/int8.pdf" target="_blank" rel="noopener">[PDF]</a>
+        <span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR), 2020</span>
+        <span class="authors"
           >Feng Zhu, Ruihao Gong, <strong>Fengwei Yu</strong>, Xianglong Liu,
-          Yanfei Wang, Zhelong Li, Xiuqi Yang, Junjie Yan</font
+          Yanfei Wang, Zhelong Li, Xiuqi Yang, Junjie Yan</span
         >
       </div>
 
       <div class="paper" id="irn">
-        <b
-          >Forward and Backward Information Retention for Accurate Binary Neural
-          Networks</b
+        <span class="title"
+          >Forward and Backward Information Retention for Accurate Binary
+          Neural Networks</span
         >
-        <a href="static/fb.pdf"><font color="#0000FF">PDF</font></a>
-        <br />2020 Conference on Computer Vision and Pattern Recognition
-        (CVPR)<br />
-        <font face="times"
+        <a class="pdf-link" href="static/fb.pdf" target="_blank" rel="noopener">[PDF]</a>
+        <span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR), 2020</span>
+        <span class="authors"
           >Haotong Qin, Ruihao Gong, Xianglong Liu, Mingzhu Shen, Ziran Wei,
-          <strong>Fengwei Yu</strong>, Jingkuan Song</font
+          <strong>Fengwei Yu</strong>, Jingkuan Song</span
         >
       </div>
+
+      <h3 class="pub-year">2019</h3>
 
       <div class="paper" id="dsq">
-        <b
-          >Differentiable Soft Quantization: Bridging Full-Precision and Low-Bit
-          Neural Networks</b
+        <span class="title"
+          >Differentiable Soft Quantization: Bridging Full-Precision and
+          Low-Bit Neural Networks</span
         >
-        <a href="static/dsq.pdf"><font color="#0000FF">PDF</font></a>
-        <br />2019 International Conference in Computer Vision (ICCV)<br />
-        <font face="times"
+        <a class="pdf-link" href="static/dsq.pdf" target="_blank" rel="noopener">[PDF]</a>
+        <span class="venue">International Conference on Computer Vision (ICCV), 2019</span>
+        <span class="authors"
           >Ruihao Gong, Xianglong Liu, Shenghu Jiang, Tianxiang Li, Peng Hu,
-          Jiazhen Lin, <strong>Fengwei Yu</strong>, Junjie Yan.</font
+          Jiazhen Lin, <strong>Fengwei Yu</strong>, Junjie Yan</span
         >
       </div>
+
+      <h3 class="pub-year">2016</h3>
 
       <div class="paper" id="poi">
-        <b
+        <span class="title"
           >POI: Multiple Object Tracking with High Performance Detection and
-          Appearance Feature</b
+          Appearance Feature</span
         >
-        <a href="static/poi.pdf"><font color="#0000FF">PDF</font></a>
-        <br />2016 European Conference on Computer Vision (ECCV) workshop<br />
-        <font face="times"
+        <a class="pdf-link" href="static/poi.pdf" target="_blank" rel="noopener">[PDF]</a>
+        <span class="venue"
+          >European Conference on Computer Vision (ECCV) Workshop, 2016</span
+        >
+        <span class="authors"
           ><strong>Fengwei Yu</strong>, Wenbo Li, Quanquan Li, Yu Liu, Xiaohua
-          Shi, Junjie Yan</font
+          Shi, Junjie Yan</span
         >
       </div>
-    </div>
+    </section>
 
-    <div style="clear: both">
-      <p align="right">
-        <font size="2">
-          <a href="http://jonbarron.info">I like this website</a>
-        </font>
-      </p>
-      <br />
-    </div>
-
-    <!-- JavaScript -->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(["_setAccount", "UA-7953909-1"]);
-      _gaq.push(["_trackPageview"]);
-
-      (function () {
-        var ga = document.createElement("script");
-        ga.type = "text/javascript";
-        ga.async = true;
-        ga.src =
-          ("https:" == document.location.protocol
-            ? "https://ssl"
-            : "http://www") + ".google-analytics.com/ga.js";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-
-    <script type="text/javascript" src="js/hidebib.js"></script>
-    <script xml:space="preserve" language="JavaScript">
-      hideallbibs();
-      hideallabs();
-    </script>
+    <footer>
+      <a href="http://jonbarron.info" target="_blank" rel="noopener">I like this website</a>
+    </footer>
   </body>
 </html>
