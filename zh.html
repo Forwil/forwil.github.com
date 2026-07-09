@@ -1,26 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Fengwei Yu (Forwil) — infrastructure for large-scale video AI: pretraining, real-time generation, inference serving, and global video infrastructure."
+      content="Fengwei Yu (Forwil) — 超大规模视频 AI 基础设施:预训练、实时生成与推理、全球视频基建。"
     />
-    <title>Fengwei Yu (Forwil)</title>
+    <title>Fengwei Yu (Forwil) · 个人主页</title>
     <script>
       (function () {
         try {
-          var pref = localStorage.getItem("lang");
-          if (pref === "zh") { location.replace("zh.html"); return; }
-          if (pref === "en") return;
-          fetch("https://www.cloudflare.com/cdn-cgi/trace")
-            .then(function (r) { return r.text(); })
-            .then(function (t) {
-              var m = t.match(/loc=([A-Z]{2})/);
-              if (m && m[1] === "CN") location.replace("zh.html");
-            })
-            .catch(function () {});
+          if (localStorage.getItem("lang") === "en") {
+            location.replace("index.html");
+          }
         } catch (e) {}
       })();
     </script>
@@ -32,9 +25,11 @@
       }
 
       body {
-        font-family: "Times New Roman", Times, serif;
-        font-size: 17px;
-        line-height: 1.7;
+        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+          "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC",
+          sans-serif;
+        font-size: 16px;
+        line-height: 1.85;
         color: #2c2c2c;
         max-width: 900px;
         margin: 0 auto;
@@ -46,25 +41,27 @@
 
       h1 {
         color: #172f7e;
-        font-size: 28px;
+        font-size: 26px;
+        font-weight: 600;
         margin-bottom: 24px;
-        letter-spacing: 0.01em;
+        letter-spacing: 0.02em;
       }
 
       h2 {
         color: #172f7e;
-        font-size: 22px;
+        font-size: 20px;
+        font-weight: 600;
         margin: 1.8em 0 0.6em;
         padding-bottom: 0.3em;
         border-bottom: 1px solid #e5e5e5;
-        letter-spacing: 0.01em;
+        letter-spacing: 0.02em;
       }
 
       h3 {
         color: #555;
-        font-size: 16px;
+        font-size: 15px;
         margin: 1.2em 0 0.5em;
-        font-weight: bold;
+        font-weight: 600;
       }
 
       a {
@@ -78,6 +75,7 @@
 
       p {
         margin-bottom: 1em;
+        text-align: justify;
       }
 
       .header {
@@ -128,8 +126,7 @@
         color: #888;
       }
 
-      .header-info .links a,
-      .header-info .links span.contact {
+      .header-info .links a {
         color: #1772d0;
       }
 
@@ -173,6 +170,7 @@
       .paper {
         margin: 0.6em 0 1.1em;
         padding-left: 0.2em;
+        font-family: "Times New Roman", Times, serif;
         font-size: 15.5px;
         line-height: 1.55;
       }
@@ -188,17 +186,15 @@
         font-style: italic;
       }
 
-      .paper .authors {
-        font-family: "Times New Roman", Times, serif;
-      }
-
       .paper .pdf-link {
         color: #1772d0;
         margin-left: 0.3em;
       }
 
       .pub-year {
-        margin-top: 1.4em;
+        margin-top: 1em;
+        font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+          sans-serif;
       }
 
       footer {
@@ -212,13 +208,13 @@
     </style>
   </head>
   <body>
-    <h1>Fengwei Yu's home page</h1>
+    <h1>个人主页 · Fengwei Yu</h1>
 
     <div class="header">
       <img
         class="profile-image"
         src="images/forwil.png"
-        alt="Portrait of Fengwei Yu"
+        alt="余锋伟头像"
       />
       <div class="header-info">
         <span class="name">Fengwei Yu (Forwil)</span>
@@ -234,156 +230,132 @@
             >Google Scholar</a
           >
           <span class="sep">·</span>
-          <span class="cite">6000+ citations</span>
+          <span class="cite">引用 6000+</span>
         </span>
-        <span class="location">Based in Shenzhen, China</span>
+        <span class="location">深圳 · Shenzhen</span>
       </div>
       <div class="lang-toggle">
-        <span class="active">English</span> ·
         <a
-          href="zh.html"
-          onclick="try{localStorage.setItem('lang','zh')}catch(e){}"
-          >中文</a
+          href="index.html"
+          onclick="try{localStorage.setItem('lang','en')}catch(e){}"
+          >English</a
         >
+        · <span class="active">中文</span>
       </div>
     </div>
 
     <section class="section">
-      <h2>Research</h2>
+      <h2>研究方向</h2>
       <p>
-        My current work centers on the systems and infrastructure behind
-        large-scale video AI — from massive pretraining to real-time
-        generation and serving. Areas of interest:
+        我目前聚焦于超大规模视频 AI 背后的系统与基础设施 ——
+        从大规模预训练到实时生成与推理服务。当前主要方向：
       </p>
       <ul class="interests">
-        <li>Ultra-large-scale video pretraining</li>
-        <li>Low-latency real-time video generation and inference</li>
-        <li>Real-time video director agents</li>
-        <li>High-performance inference serving architecture</li>
-        <li>Globally distributed video infrastructure</li>
-        <li>Large-scale data platforms</li>
+        <li>超大规模视频预训练</li>
+        <li>低延迟实时视频生成与推理</li>
+        <li>视频实时导演 Agent</li>
+        <li>高性能推理服务架构</li>
+        <li>全球视频基建</li>
+        <li>大规模数据平台</li>
       </ul>
     </section>
 
     <section class="section">
-      <h2>News</h2>
+      <h2>动态</h2>
       <ul class="news">
-        <li>[2024] 1 paper accepted at IJCV.</li>
-        <li>[2023] 5 papers accepted at CVPR, TPAMI, ICPP, MLSys, and IPDPS.</li>
-        <li>[2022] 5 papers accepted at ICLR, CVPR, NeurIPS, and ICPP.</li>
-        <li>[2021] 7 papers accepted at ICLR, CVPR, NeurIPS, and ICCV.</li>
+        <li>[2024] 1 篇论文被 IJCV 录用。</li>
+        <li>[2023] 5 篇论文被 CVPR、TPAMI、ICPP、MLSys、IPDPS 录用。</li>
+        <li>[2022] 5 篇论文被 ICLR、CVPR、NeurIPS、ICPP 录用。</li>
+        <li>[2021] 7 篇论文被 ICLR、CVPR、NeurIPS、ICCV 录用。</li>
         <li>
-          [2021] Our team won the championship of the
+          [2021] 团队获
           <a href="https://lpcv.ai/2021LPCVC/introduction" target="_blank" rel="noopener"
-            >LPCVC 2021 FPGA Track</a
-          >, with our
+            >LPCVC 2021 FPGA 赛道</a
+          >冠军，冠军
           <a href="https://github.com/ModelTC/LPCV2021_Winner_Solution" target="_blank" rel="noopener"
-            >winning solution</a
+            >方案</a
           >
-          released as open source. We also released the
+          已开源。同期发布了量化 benchmark
           <a href="http://mqbench.tech/" target="_blank" rel="noopener">MQBench</a>
-          quantization benchmark and the
-          <a href="https://github.com/ModelTC/EOD" target="_blank" rel="noopener">UP</a>
-          training framework.
+          和训练框架
+          <a href="https://github.com/ModelTC/EOD" target="_blank" rel="noopener">UP</a>。
         </li>
-        <li>[2020] 4 papers accepted at ICPP, CVPR, and ICLR.</li>
-        <li>[2019] 1 paper accepted at ICCV.</li>
+        <li>[2020] 4 篇论文被 ICPP、CVPR、ICLR 录用。</li>
+        <li>[2019] 1 篇论文被 ICCV 录用。</li>
         <li>
-          [2016] We won 1st place in the ECCV MOT16 Challenge
-          (<a
+          [2016] 获 ECCV MOT16 挑战赛冠军（<a
             href="https://drive.google.com/open?id=0B5ACiy41McAHMjczS2p0dFg3emM"
             target="_blank"
             rel="noopener"
-            >data</a
-          >); 1 paper accepted at ECCV.
+            >数据</a
+          >）；1 篇论文被 ECCV 录用。
         </li>
       </ul>
     </section>
 
     <section class="section">
-      <h2>About me</h2>
+      <h2>关于我</h2>
+      <p>2025 年，我联合创办了一家 AI 公司，专注于超大规模视频 AI 的基础设施建设。</p>
       <p>
-        In 2025 I co-founded an AI company building infrastructure for
-        large-scale video AI.
+        此前，我在自动驾驶头部公司
+        <strong>Momenta</strong>（HKEX: 6880）任高级研发总监，负责训练与推理基础设施 ——
+        搭建把感知、规划模型从研究原型送上量产车、并适配多种车载芯片的一整套系统。
       </p>
       <p>
-        Prior to that, I was Senior R&amp;D Director at
-        <strong>Momenta</strong> (HKEX: 6880), a leader in autonomous driving,
-        where I led the training and inference infrastructure team — building
-        the systems that took perception and planning models from research
-        prototypes to on-vehicle deployment across a broad range of automotive
-        chips.
-      </p>
-      <p>
-        Before Momenta, I was Vice Research Director at
-        <strong>SenseTime</strong> Research (HKEX: 0020), advised by
+        在 Momenta 之前，我在<strong>商汤研究院</strong>（HKEX: 0020）担任研究副总监，
+        导师为
         <a href="http://www.ee.cuhk.edu.hk/~xgwang/" target="_blank" rel="noopener"
-          >Prof. Xiaogang Wang</a
-        >
-        and
-        <a href="https://yan-junjie.github.io/" target="_blank" rel="noopener"
-          >Dr. Junjie Yan</a
-        >. I led the Model-ToolChain team behind SenseTime's internal AI
-        platform — the shared training, compression, and deployment stack
-        that powered the majority of the company's smart-city and
-        smart-vehicle products, scaling model production by roughly 2× each
-        year.
+          >王晓刚教授</a
+        >和<a href="https://yan-junjie.github.io/" target="_blank" rel="noopener"
+          >闫俊杰博士</a
+        >。我领导 Model-ToolChain 团队，构建商汤内部的 AI 平台 ——
+        一套共享的训练、压缩、部署栈，支撑了公司大部分智慧城市与智能车业务，
+        模型产量以约每年 2 倍的速度增长。
       </p>
       <p>
-        Much of our work is open-sourced under the
+        团队的大量工作以
         <a href="https://github.com/ModelTC/" target="_blank" rel="noopener">ModelTC</a>
-        organization on GitHub, and I write about it on Zhihu at
+        组织在 GitHub 开源，相关技术文章发表于知乎专栏
         <a href="https://www.zhihu.com/column/c_1320691511223136256" target="_blank" rel="noopener"
-          >踢翻炼丹炉</a
-        >.
+          >《踢翻炼丹炉》</a
+        >。
       </p>
       <p>
-        I first joined SenseTime as a full-time intern for two years in the
-        Video Intelligence Group under
+        我最早以全职实习生的身份加入商汤，在视频智能组随
         <a href="https://yan-junjie.github.io/" target="_blank" rel="noopener"
-          >Dr. Junjie Yan</a
-        >, working on high-performance video analysis systems (face, vehicle,
-        pedestrian) and porting algorithms to embedded platforms.
+          >闫俊杰博士</a
+        >实习两年，负责高性能视频分析系统（人脸、车辆、行人）及算法向嵌入式平台的移植。
       </p>
       <p>
-        During college, I led the BUAA HPC team to first prize at the ASC
-        Student Supercomputer Challenge 2015, and spent half a year interning
-        on the Microsoft IoT team in Beijing, working on IoT communication
-        protocols.
+        求学期间，我带领北航 HPC 团队获 ASC 2015
+        学生超算竞赛一等奖，并在微软北京 IoT 团队实习半年，参与 IoT
+        通信协议开发。
       </p>
       <p>
-        I received my M.S. (2018) and B.S. (2015) in Computer Science from
-        Beihang University, advised by Prof. Xiaohua Shi. My research covered
-        JVM memory profiling, the CompCert project, and language models.
+        我于 2018 年和 2015
+        年在北京航空航天大学获得计算机科学硕士和学士学位，师从史晓华教授，研究方向涵盖
+        JVM 内存 profiling、CompCert 项目与语言模型。
       </p>
     </section>
 
     <section class="section">
-      <h2>Awards</h2>
+      <h2>获奖</h2>
       <ul class="news">
         <li>
-          [2021] Champion, <a href="https://lpcv.ai/2021LPCVC/introduction" target="_blank" rel="noopener">LPCVC 2021</a> FPGA Track (as team lead).
+          [2021] <a href="https://lpcv.ai/2021LPCVC/introduction" target="_blank" rel="noopener">LPCVC 2021</a> FPGA 赛道冠军（团队负责人）。
         </li>
+        <li>[2017] 北京航空航天大学 研究生国家奖学金。</li>
+        <li>[2016] 北京航空航天大学 华为奖学金。</li>
+        <li>[2016] ECCV MOT16 多目标跟踪挑战赛 第一名。</li>
         <li>
-          [2017] Graduate National Scholarship, Beihang University.
+          [2015] ASC15 全国大学生超算竞赛 一等奖（全球第 5，北航 HPC 团队负责人）。
         </li>
-        <li>
-          [2016] Huawei Scholarship, Beihang University.
-        </li>
-        <li>
-          [2016] 1st place, ECCV MOT16 Multi-Object Tracking Challenge.
-        </li>
-        <li>
-          [2015] 1st Prize (5th globally), ASC15 Student Supercomputer Challenge (team lead, Beihang HPC).
-        </li>
-        <li>
-          [2010, 2009] 1st Prize, National Olympiad in Informatics in Provinces (NOIp) — recruited to Beihang University CS through the NOIp track.
-        </li>
+        <li>[2010、2009] 全国青少年信息学奥林匹克联赛（NOIp）一等奖，凭 NOIp 保送北京航空航天大学计算机学院。</li>
       </ul>
     </section>
 
     <section class="section">
-      <h2 id="publications">Publications</h2>
+      <h2 id="publications">论文</h2>
 
       <h3 class="pub-year">2024</h3>
 
@@ -392,7 +364,7 @@
         <a class="pdf-link" href="https://arxiv.org/abs/2209.11404" target="_blank" rel="noopener"
           >[PDF]</a
         >
-        <span class="venue">International Journal of Computer Vision (IJCV), 2024</span>
+        <span class="venue">IJCV 2024</span>
         <span class="authors"
           >Weitao Feng, Lei Bai, Yongqiang Yao, <strong>Fengwei Yu</strong>,
           Wanli Ouyang</span
@@ -406,7 +378,7 @@
         <a class="pdf-link" href="https://arxiv.org/abs/2303.02936" target="_blank" rel="noopener"
           >[PDF]</a
         >
-        <span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR), 2023</span>
+        <span class="venue">CVPR 2023</span>
         <span class="authors"
           >Yuanzheng Ci, Yizhou Wang, Meilin Chen, Shixiang Tang, Lei Bai, Feng
           Zhu, Rui Zhao, <strong>Fengwei Yu</strong>, Donglian Qi, Wanli
@@ -422,10 +394,7 @@
         <a class="pdf-link" href="https://arxiv.org/abs/2210.05566" target="_blank" rel="noopener"
           >[PDF]</a
         >
-        <span class="venue"
-          >IEEE Transactions on Pattern Analysis and Machine Intelligence
-          (TPAMI), 2023</span
-        >
+        <span class="venue">TPAMI 2023</span>
         <span class="authors"
           >Jingru Tan, Bo Li, Xin Lu, Yongqiang Yao,
           <strong>Fengwei Yu</strong>, Tong He, Wanli Ouyang</span
@@ -437,7 +406,7 @@
           >Exploiting Subgraph Similarities for Efficient Auto-tuning of Tensor
           Programs</span
         >
-        <span class="venue">International Conference on Parallel Processing (ICPP), 2023</span>
+        <span class="venue">ICPP 2023</span>
         <span class="authors"
           >Mingzhen Li, Hailong Yang, Shanjun Zhang,
           <strong>Fengwei Yu</strong>, Ruihao Gong, Yi Liu, Zhongzhi Luan,
@@ -450,7 +419,7 @@
           >SysNoise: Exploring and Benchmarking Training-Deployment System
           Inconsistency</span
         >
-        <span class="venue">Conference on Machine Learning and Systems (MLSys), 2023</span>
+        <span class="venue">MLSys 2023</span>
         <span class="authors"
           >Yan Wang, Yuhang Li, Ruihao Gong, Aishan Liu, Yanfei Wang, Jian Hu,
           Yongqiang Yao, Yunchen Zhang, Tianzi Xiao,
@@ -466,9 +435,7 @@
         <a class="pdf-link" href="https://arxiv.org/pdf/2209.02478.pdf" target="_blank" rel="noopener"
           >[PDF]</a
         >
-        <span class="venue"
-          >International Parallel &amp; Distributed Processing Symposium (IPDPS), 2023</span
-        >
+        <span class="venue">IPDPS 2023</span>
         <span class="authors"
           >Jianjin Liao, Mingzhen Li, Hailong Yang, Qingxiao Sun, Biao Sun,
           Jiwei Hao, Tianyu Feng, <strong>Fengwei Yu</strong>, Shengdong Chen,
@@ -486,9 +453,7 @@
         <a class="pdf-link" href="https://arxiv.org/abs/2209.13325" target="_blank" rel="noopener"
           >[PDF]</a
         >
-        <span class="venue"
-          >Conference on Neural Information Processing Systems (NeurIPS), 2022</span
-        >
+        <span class="venue">NeurIPS 2022</span>
         <span class="authors"
           >Xiuying Wei, Yunchen Zhang, Xiangguo Zhang, Ruihao Gong, Shanghang
           Zhang, Qi Zhang, <strong>Fengwei Yu</strong>, Xianglong Liu</span
@@ -502,7 +467,7 @@
         <a class="pdf-link" href="https://arxiv.org/abs/2201.02593" target="_blank" rel="noopener"
           >[PDF]</a
         >
-        <span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR), 2022</span>
+        <span class="venue">CVPR 2022</span>
         <span class="authors"
           >Bo Li, Yongqiang Yao, Jingru Tan, Gang Zhang,
           <strong>Fengwei Yu</strong>, Jianwei Lu, Ye Luo</span
@@ -514,7 +479,7 @@
           >NNLQP: A Multi-Platform Neural Network Latency Query and Prediction
           System with an Evolving Database</span
         >
-        <span class="venue">International Conference on Parallel Processing (ICPP), 2022</span>
+        <span class="venue">ICPP 2022</span>
         <span class="authors"
           >Liang Liu, Mingzhu Shen, Ruihao Gong, <strong>Fengwei Yu</strong>,
           Hailong Yang</span
@@ -529,7 +494,7 @@
         <a class="pdf-link" href="https://openreview.net/pdf?id=ySQH0oDyp7" target="_blank" rel="noopener"
           >[PDF]</a
         >
-        <span class="venue">International Conference on Learning Representations (ICLR), 2022</span>
+        <span class="venue">ICLR 2022</span>
         <span class="authors"
           >Xiuying Wei, Ruihao Gong, Yuhang Li, Xianglong Liu,
           <strong>Fengwei Yu</strong></span
@@ -544,7 +509,7 @@
         <a class="pdf-link" href="https://openreview.net/pdf?id=zq1iJkNk3uN" target="_blank" rel="noopener"
           >[PDF]</a
         >
-        <span class="venue">International Conference on Learning Representations (ICLR), 2022</span>
+        <span class="venue">ICLR 2022</span>
         <span class="authors"
           >Yangguang Li, Feng Liang, Lichen Zhao, Yufeng Cui, Wanli Ouyang,
           Jing Shao, <strong>Fengwei Yu</strong>, Junjie Yan</span
@@ -565,7 +530,7 @@
           rel="noopener"
           >[PDF]</a
         >
-        <span class="venue">International Conference on Computer Vision (ICCV), 2021</span>
+        <span class="venue">ICCV 2021</span>
         <span class="authors"
           >Mingzhu Shen, Feng Liang, Ruihao Gong, Yuhang Li, Chuming Li, Chen
           Lin, <strong>Fengwei Yu</strong>, Junjie Yan, Wanli Ouyang</span
@@ -581,7 +546,7 @@
           rel="noopener"
           >[PDF]</a
         >
-        <span class="venue">International Conference on Computer Vision (ICCV), 2021</span>
+        <span class="venue">ICCV 2021</span>
         <span class="authors"
           >Kun Yuan, Quanquan Li, Shaopeng Guo, Dapeng Chen, Aojun Zhou,
           <strong>Fengwei Yu</strong>, Ziwei Liu</span
@@ -596,7 +561,7 @@
         <a class="pdf-link" href="https://arxiv.org/pdf/2011.09899" target="_blank" rel="noopener"
           >[PDF]</a
         >
-        <span class="venue">International Conference on Computer Vision (ICCV), 2021</span>
+        <span class="venue">ICCV 2021</span>
         <span class="authors"
           >Yuhang Li, Feng Zhu, Ruihao Gong, Mingzhu Shen, Xin Dong,
           <strong>Fengwei Yu</strong>, Shaoqing Lu, Shi Gu</span
@@ -608,7 +573,7 @@
         <a class="pdf-link" href="https://arxiv.org/abs/2103.11816" target="_blank" rel="noopener"
           >[PDF]</a
         >
-        <span class="venue">International Conference on Computer Vision (ICCV), 2021</span>
+        <span class="venue">ICCV 2021</span>
         <span class="authors"
           >Kun Yuan, Shaopeng Guo, Ziwei Liu, Aojun Zhou,
           <strong>Fengwei Yu</strong>, Wei Wu</span
@@ -623,9 +588,7 @@
         <a class="pdf-link" href="https://openreview.net/pdf?id=TUplOmF8DsM" target="_blank" rel="noopener"
           >[PDF]</a
         >
-        <span class="venue"
-          >Conference on Neural Information Processing Systems (NeurIPS), 2021</span
-        >
+        <span class="venue">NeurIPS 2021</span>
         <span class="authors"
           >Yuhang Li, Mingzhu Shen, Jian Ma, Yan Ren, Mingxin Zhao, Qi Zhang,
           Ruihao Gong, <strong>Fengwei Yu</strong>, Junjie Yan</span
@@ -643,7 +606,7 @@
           rel="noopener"
           >[PDF]</a
         >
-        <span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR), 2021</span>
+        <span class="venue">CVPR 2021</span>
         <span class="authors"
           >Xiangguo Zhang, Haotong Qin, Yifu Ding, Ruihao Gong, Qinghua Yan,
           Renshuai Tao, Yuhang Li, <strong>Fengwei Yu</strong>, Xianglong
@@ -659,7 +622,7 @@
         <a class="pdf-link" href="https://openreview.net/forum?id=POWv6hDd9XH" target="_blank" rel="noopener"
           >[PDF]</a
         >
-        <span class="venue">International Conference on Learning Representations (ICLR), 2021</span>
+        <span class="venue">ICLR 2021</span>
         <span class="authors"
           >Yuhang Li, Ruihao Gong, Xu Tan, Yang Yang, Peng Hu, Qi Zhang,
           <strong>Fengwei Yu</strong>, Wei Wang, Shi Gu</span
@@ -680,7 +643,7 @@
           rel="noopener"
           >[PDF]</a
         >
-        <span class="venue">International Conference on Parallel Processing (ICPP), 2020</span>
+        <span class="venue">ICPP 2020</span>
         <span class="authors"
           >Qingchang Han, Yongmin Hu, <strong>Fengwei Yu</strong>, Hailong
           Yang, Bing Liu, Peng Hu, Ruihao Gong, Yanfei Wang, Rui Wang, Zhongzhi
@@ -693,9 +656,7 @@
           >DMS: Differentiable Dimension Search for Binary Neural Networks</span
         >
         <a class="pdf-link" href="static/dms.pdf" target="_blank" rel="noopener">[PDF]</a>
-        <span class="venue"
-          >International Conference on Learning Representations (ICLR) NAS Workshop, 2020</span
-        >
+        <span class="venue">ICLR 2020 NAS Workshop</span>
         <span class="authors"
           >Yuhang Li, Ruihao Gong, <strong>Fengwei Yu</strong>, Xin Dong,
           Xianglong Liu</span
@@ -705,7 +666,7 @@
       <div class="paper" id="int8">
         <span class="title">Towards Unified INT8 Training for Convolutional Neural Networks</span>
         <a class="pdf-link" href="static/int8.pdf" target="_blank" rel="noopener">[PDF]</a>
-        <span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR), 2020</span>
+        <span class="venue">CVPR 2020</span>
         <span class="authors"
           >Feng Zhu, Ruihao Gong, <strong>Fengwei Yu</strong>, Xianglong Liu,
           Yanfei Wang, Zhelong Li, Xiuqi Yang, Junjie Yan</span
@@ -718,7 +679,7 @@
           Neural Networks</span
         >
         <a class="pdf-link" href="static/fb.pdf" target="_blank" rel="noopener">[PDF]</a>
-        <span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR), 2020</span>
+        <span class="venue">CVPR 2020</span>
         <span class="authors"
           >Haotong Qin, Ruihao Gong, Xianglong Liu, Mingzhu Shen, Ziran Wei,
           <strong>Fengwei Yu</strong>, Jingkuan Song</span
@@ -733,7 +694,7 @@
           Low-Bit Neural Networks</span
         >
         <a class="pdf-link" href="static/dsq.pdf" target="_blank" rel="noopener">[PDF]</a>
-        <span class="venue">International Conference on Computer Vision (ICCV), 2019</span>
+        <span class="venue">ICCV 2019</span>
         <span class="authors"
           >Ruihao Gong, Xianglong Liu, Shenghu Jiang, Tianxiang Li, Peng Hu,
           Jiazhen Lin, <strong>Fengwei Yu</strong>, Junjie Yan</span
@@ -748,9 +709,7 @@
           Appearance Feature</span
         >
         <a class="pdf-link" href="static/poi.pdf" target="_blank" rel="noopener">[PDF]</a>
-        <span class="venue"
-          >European Conference on Computer Vision (ECCV) Workshop, 2016</span
-        >
+        <span class="venue">ECCV 2016 Workshop</span>
         <span class="authors"
           ><strong>Fengwei Yu</strong>, Wenbo Li, Quanquan Li, Yu Liu, Xiaohua
           Shi, Junjie Yan</span
